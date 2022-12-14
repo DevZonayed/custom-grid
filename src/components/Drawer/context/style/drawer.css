@@ -1,0 +1,39 @@
+body {
+  overflow-x: hidden;
+}
+.drawer_container {
+  position: absolute;
+  z-index: 9999;
+  background-color: #fff;
+  box-shadow: 10px 10px 20px black;
+  min-height: 100vh;
+  width: var(--drawerWidth);
+  right: calc((var(--drawerWidth) - (var(--drawerWidth) * 2)));
+  top: 0;
+  transition: 0.4s;
+  visibility: hidden;
+}
+
+.drawer_container.open {
+  right: 0;
+  visibility: visible;
+}
+
+.drawer_overlay {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  background-color: rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  transition: 0.4s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.drawer_overlay.open {
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+}

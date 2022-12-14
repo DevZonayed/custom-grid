@@ -1,0 +1,24 @@
+.tooltip_container {
+  position: relative;
+  cursor: pointer;
+}
+.tooltip_message {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  max-width: 300px;
+  width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+  transform: translate(-50%, 0%);
+  text-align: center;
+  background: #fafafa;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.tooltip_container:hover .tooltip_message {
+  opacity: 1;
+  visibility: visible;
+}
